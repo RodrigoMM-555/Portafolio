@@ -116,3 +116,12 @@ header {
         gap: 10px;
     }
 }
+
+/* ========= FOOTER ========= */
+footer{
+    background: #e6f2f2;
+    margin-top: 40px;
+    padding: 12px;
+    text-align: center;
+    border-top: 2px solid #cfe6e6;
+}
