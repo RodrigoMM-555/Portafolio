@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto · Nombre del proyecto</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header>
+    <h1>Nombre del proyecto</h1>
+</header>
+
+<nav id="menu">
+    <a href="index.html"><h2>Inicio</h2></a>
+    <a href="#descripcion"><h2>Descripción</h2></a>
+    <a href="#galeria"><h2>Galería</h2></a>
+    <a href="#tecnologias"><h2>Tecnologías</h2></a>
+</nav>
+
+<main style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
+
+    <!-- DESCRIPCIÓN -->
+    <section id="descripcion" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Descripción</h2>
+        <p>
+            Es una web sencilla en la que se pueden añadir puntos, modificarlos y eliminarlos. Estos putnos pueden ser desplazados y clasificados para que se muestren de una forma u otra en el documento impreso.
+            Hablando del documento impreso, el programa tiene una funcion que permite transformar los puntos de la lista en un documento pdf. 
+        </p>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Galería</h2>
+
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        ">
+            <img src="img/puntos1.PNG" alt="Captura 1" style="width:100%; border-radius:15px;">
+            <img src="img/puntos2.PNG" alt="Captura 2" style="width:100%; border-radius:15px;">
+        </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section id="tecnologias" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Tecnologías usadas</h2>
+
+        <ul style="padding-left: 20px;">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>MySQL</li>
+        </ul>
+    </section>
+
+    <!-- ENLACES -->
+    <section>
+        <h2 style="margin-bottom: 15px; color: teal;">Enlaces</h2>
+        <p>
+            <a href="https://github.com/RodrigoMM-555/Puntos_reunion" target="_blank">Repositorio en GitHub</a><br>
+        </p>
+    </section>
+
+</main>
+
+<footer>(c) Rodrigo Menéndez Molina - 2025</footer>
+
+</body>
+</html>
