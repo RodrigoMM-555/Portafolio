@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto · Nombre del proyecto</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header>
+    <h1>Nombre del proyecto</h1>
+</header>
+
+<nav id="menu">
+    <a href="index.html"><h2>Inicio</h2></a>
+    <a href="#descripcion"><h2>Descripción</h2></a>
+    <a href="#galeria"><h2>Galería</h2></a>
+    <a href="#tecnologias"><h2>Tecnologías</h2></a>
+</nav>
+
+<main style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
+
+    <!-- DESCRIPCIÓN -->
+    <section id="descripcion" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Descripción</h2>
+        <p>
+            Simple animación de círculos con JavaScript y HTML5 Canvas.
+            Es facil de entender y sirve como base para proyectos más complejos de animaciones o juegos.
+        </p>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Galería</h2>
+
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        ">
+        <canvas></canvas>
+        </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section id="tecnologias" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Tecnologías usadas</h2>
+
+        <ul style="padding-left: 20px;">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>(c) Rodrigo Menéndez Molina - 2025</footer>
+
+    <script>
+        let lienzo = document.querySelector("canvas");
+        let contexto = lienzo.getContext("2d");
+
+        lienzo.width = 1000
+        lienzo.height = 800;
+
+        let circulos = [];
+
+        function crearCirculo() {
+
+            // Posicion y tamaño aleatorio
+            let radio = Math.random() * 50;
+            let x = -radio; // Empieza fuera del canvas (lado izquierdo)
+            let y = Math.random() * lienzo.height;
+
+            // Color aleatorio
+            let rojo = Math.round(Math.random() * 255);
+            let verde = Math.round(Math.random() * 255);
+            let azul = Math.round(Math.random() * 255);
+            let alpha = Math.random().toFixed(2); // número entre 0 y 1 con 2 decimales
+            let color = "rgba(" + rojo + ", " + verde + "," + azul + "," + alpha + ")";
+
+            let velocidad = Math.random() * 2 + 1;
+
+            circulos.push({
+                x: x,
+                y: y,
+                radio: radio,
+                color: color,
+                velocidad: velocidad
+            });
+
+            
+        }
+
+        // Genera círculos constantemente
+        setInterval(crearCirculo, 50);
+
+        function animar() {
+
+            contexto.clearRect(0, 0, lienzo.width, lienzo.height);
+
+            for (let i = 0; i < circulos.length; i++) {
+
+                circulos[i].x += circulos[i].velocidad;
+
+                contexto.fillStyle = circulos[i].color;
+                contexto.beginPath();
+                contexto.arc(circulos[i].x, circulos[i].y, circulos[i].radio, 0, Math.PI * 2);
+                contexto.fill();
+            }
+
+            // Eliminar los que ya están fuera completamente
+            for (let i = 0; i < circulos.length; i++) {
+                if (circulos[i].x - circulos[i].radio > lienzo.width) {
+                    circulos.splice(i, 1);
+                    i--;
+                }
+            }
+
+            requestAnimationFrame(animar);
+        }
+
+        animar();
+    </script>
+
+</body>
+</html>
