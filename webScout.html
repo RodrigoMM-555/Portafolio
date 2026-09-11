@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto · Lista de puntos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<header>
+    <h1>Lista de puntos</h1>
+</header>
+
+<nav id="menu">
+    <a href="index.html"><h2>Inicio</h2></a>
+    <a href="#descripcion"><h2>Descripción</h2></a>
+    <a href="#galeria"><h2>Galería</h2></a>
+    <a href="#tecnologias"><h2>Tecnologías</h2></a>
+</nav>
+
+<main style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
+
+    <!-- DESCRIPCIÓN -->
+    <section id="descripcion" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Descripción</h2>
+        <p>
+            Web de gestion de documentacion de un grupo scout. Se pueden descargar y rellenar circulares a a partir de infromacion dinamica y editable.
+            Tiene parte de cliente par aver la informacion y decargar, rellenar y subir circulares, asi como ver las ya subidas.
+            Y tiene parte de administrador para ver toda la informacion en tablas, galeria de circulares, decarga masiva de documentacion y creacion y administracion de usuarios. 
+        </p>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Galería</h2>
+
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        ">
+            <img src="img/webScout1.png" alt="Captura 1" style="width:100%; border-radius:15px;">
+            <img src="img/webScout2.png" alt="Captura 2" style="width:100%; border-radius:15px;">
+            <img src="img/webScout3.png" alt="Captura 3" style="width:100%; border-radius:15px;">
+            <img src="img/webScout4.png" alt="Captura 4" style="width:100%; border-radius:15px;">
+            <img src="img/webScout5.png" alt="Captura 5" style="width:100%; border-radius:15px;">
+            <img src="img/webScout6.png" alt="Captura 6" style="width:100%; border-radius:15px;">
+            <img src="img/webScout7.png" alt="Captura 7" style="width:100%; border-radius:15px;">
+            <img src="img/webScout8.png" alt="Captura 8" style="width:100%; border-radius:15px;">
+            <img src="img/webScout9.png" alt="Captura 9" style="width:100%; border-radius:15px;">
+
+        </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section id="tecnologias" style="margin-bottom: 50px;">
+        <h2 style="margin-bottom: 15px; color: teal;">Tecnologías usadas</h2>
+
+        <ul style="padding-left: 20px;">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>MySQL</li>
+            <li>PHP</li>
+        </ul>
+    </section>
+
+    <!-- ENLACES -->
+    <section>
+        <h2 style="margin-bottom: 15px; color: teal;">Enlaces</h2>
+        <p>
+            <a href="https://github.com/RodrigoMM-555/WebScout" target="_blank">Repositorio en GitHub</a><br>
+        </p>
+    </section>
+
+</main>
+
+<footer>(c) Rodrigo Menéndez Molina - 2025</footer>
+
+</body>
+</html>
